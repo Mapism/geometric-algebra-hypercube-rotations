@@ -36,6 +36,10 @@ R.reverse() * v * R
 
 After rotation, the vertices are projected into 3-dimensional space and converted into coordinates.
 
+```python
+(Rot[i].lc(I))*e3*e2*e1
+```
+
 ### 4. Visualisation
 The script uses 3-dimensional projective geometric algebra to plot:
 - the original hypercube projection
@@ -53,8 +57,8 @@ The script currently imports:
 
 After running, script will ask for:
 
-1. the dimension of the hypercube
-2. the rotation angle in degrees
+- the dimension of the hypercube
+- the rotation angle in degrees
 
 Example:
 
