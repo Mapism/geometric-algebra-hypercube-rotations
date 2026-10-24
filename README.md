@@ -8,15 +8,6 @@ This repository contains a Python script that constructs an \(N\)-dimensional hy
 
 This code was developed as part of a mathematical research project on applications of geometric algebra in \(\mathbb{R}^n\).
 
-## Main Features
-
-- Generates the vertices of an \(N\)-dimensional hypercube
-- Represents hypercube vertices as geometric algebra vectors
-- Applies a geometric algebra rotor to rotate the hypercube
-- Projects the rotated hypercube into 3D
-- Builds the edge structure of the hypercube
-- Visualises the original and rotated hypercube using `kingdon`
-
 ### 1. Hypercube construction
 An \(N\)-dimensional hypercube has:
 - \(2^N\) vertices
