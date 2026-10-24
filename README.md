@@ -18,26 +18,26 @@ product((0, 1), repeat=N)
 
 These coordinate tuples are then converted into geometric algebra vectors.
 
-### 2. Rotor-based rotation
-The code defines a bivector plane of rotation and constructs a rotor using an exponential map:
+### 2. Rotation
+
+The code defines a rotor corresponding to rotation in the given plane
 
 ```python
 R = exp((plane)*angle*math.pi/180/2)
 ```
 
-The hypercube vertices are then rotated via:
+The vertices of the hypercube are rotated using the rotor
 
 ```python
 R.reverse() * v * R
 ```
 
-This is the geometric algebra analogue of applying a rotation transformation.
-
 ### 3. Projection into 3D
-After rotation, the vertices are projected into 3-dimensional space and converted into coordinates suitable for visualisation.
+
+After rotation, the vertices are projected into 3-dimensional space and converted into coordinates.
 
 ### 4. Visualisation
-The script uses projective geometric algebra in 3D to represent points and edges, and then plots:
+The script uses 3-dimensional projective geometric algebra to plot:
 - the original hypercube projection
 - the rotated hypercube projection
 
@@ -49,21 +49,9 @@ The script currently imports:
 - `numpy`
 - `sympy`
 
-Install them with:
-
-```bash
-pip install kingdon numpy sympy
-```
-
 ## Usage
 
-Run the script with Python:
-
-```bash
-python your_script_name.py
-```
-
-The script will ask for:
+After running, script will ask for:
 
 1. the dimension of the hypercube
 2. the rotation angle in degrees
@@ -85,36 +73,13 @@ In the current version of the code, the plane of rotation is hard-coded as:
 plane = e1*e2 + e2*e4 + e4*e3 + 2*e2*e4
 ```
 
-This means the script is most naturally suited to dimensions where these basis elements exist (in particular, \(N \ge 4\)).
+To get meaningful results in dimensions greater than 4, editing the plane of rotation is recommended.
 
-## Notes and Limitations
-
-- The rotation plane is currently fixed manually rather than chosen dynamically.
-- The script is interactive and expects user input from the terminal.
-- Some imported modules/functions are not used in the current version.
-- The script is primarily intended as a mathematical exploration rather than a polished software package.
-
-## Research Context
-
-This implementation was developed as part of a research project on applications of geometric algebra in higher-dimensional geometry.
-
-The project studies how geometric algebra can be used to represent rotations and visualise projections of \(N\)-dimensional hypercubes.
-
-## Possible Extensions
-
-Some natural extensions of the project would be:
-
-- allowing the user to choose the rotation plane dynamically
-- supporting random rotors
-- improving the projection method
-- exporting figures automatically
-- generalising the visualisation pipeline
-- refactoring the code into reusable functions/classes
 
 ## Author
 
-Taner Erdem Akyıldız
+Mapism
 
 ## Repository Purpose
 
-This repository is intended to document and showcase the computational side of my geometric algebra research project.
+This repository is intended to document and showcase my geometric algebra research project.
