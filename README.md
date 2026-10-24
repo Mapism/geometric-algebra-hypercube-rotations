@@ -6,7 +6,7 @@ Python implementation for visualising higher-dimensional rotations of hypercubes
 
 This repository contains a Python script that constructs an N-dimensional hypercube, rotates it in a higher-dimensional plane and projects the results into 3-dimensional space using geometric algebra.
 
-This code was developed as part of a mathematical research project on applications of geometric algebra in R^N
+This code was developed as part of a mathematical research project on applications of geometric algebra in R^$^{superscript}$
 
 ### 1. Hypercube construction
 An \(N\)-dimensional hypercube has:
